@@ -108,6 +108,87 @@
     color:var(--text-dim);
   }
   .trust-bullets .ti{color:var(--gold); font-size:16px;}
+
+  .hero-tier-strip{
+    display:flex;
+    gap:10px;
+    margin-bottom:28px;
+    flex-wrap:wrap;
+  }
+  .tier-pill{
+    position:relative;
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    gap:2px;
+    padding:10px 16px;
+    background:var(--surface);
+    border:1.5px solid var(--border-strong);
+    border-radius:10px;
+    text-decoration:none;
+    color:var(--text);
+    transition:border-color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+    min-width:84px;
+  }
+  .tier-pill:hover{
+    border-color:var(--orange);
+    transform:translateY(-2px);
+    box-shadow:0 8px 20px -12px rgba(193,80,46,0.4);
+  }
+  .tier-pill .tp-name{
+    font-family:'JetBrains Mono',monospace;
+    font-size:11px;
+    letter-spacing:0.06em;
+    text-transform:uppercase;
+    color:var(--text-dim);
+  }
+  .tier-pill .tp-price{
+    font-family:'Fraunces',serif;
+    font-weight:600;
+    font-size:22px;
+    line-height:1;
+  }
+  .tier-pill.popular{
+    border-color:var(--orange);
+    background:rgba(193,80,46,0.05);
+  }
+  .tier-pill.popular .tp-badge{
+    position:absolute;
+    top:-10px;
+    right:10px;
+    background:var(--orange);
+    color:#fff;
+    font-family:'JetBrains Mono',monospace;
+    font-size:9px;
+    letter-spacing:0.05em;
+    text-transform:uppercase;
+    padding:3px 7px;
+    border-radius:999px;
+    white-space:nowrap;
+  }
+
+  .hero-guarantee-row{
+    display:flex;
+    flex-wrap:wrap;
+    gap:20px;
+    margin-top:22px;
+    padding-top:22px;
+    border-top:1px solid var(--border);
+  }
+  .hero-guarantee-row .hg-item{
+    display:flex;
+    align-items:center;
+    gap:7px;
+    font-size:13px;
+    color:var(--text-dim);
+  }
+  .hero-guarantee-row .ti{color:var(--gold); font-size:15px;}
+
+  @media (max-width:640px){
+    .hero-tier-strip{gap:8px;}
+    .tier-pill{padding:9px 12px; min-width:72px;}
+    .tier-pill .tp-price{font-size:18px;}
+  }
   .btn-primary{
     background:var(--orange);
     color:#fff;
@@ -801,14 +882,41 @@
       <div class="eyebrow">One tap. Your reviews. Your name.</div>
       <h1>Every badge is <em>yours</em>,<br>not a template.</h1>
       <p class="lede">A wearable NFC badge reel that opens your Google review page in one tap — your name, your colors, your style. Not a generic card. Try it on the right.</p>
+
+      <div class="hero-tier-strip">
+        <a href="https://buy.stripe.com/fZuaEW1YX41p5se3Sh33W00" target="_blank" rel="noopener" class="tier-pill">
+          <span class="tp-name">Solo</span>
+          <span class="tp-price">$40</span>
+        </a>
+        <a href="https://buy.stripe.com/8x23cueLJ0Pd7Am0G533W01" target="_blank" rel="noopener" class="tier-pill popular">
+          <span class="tp-badge">Popular</span>
+          <span class="tp-name">Duo</span>
+          <span class="tp-price">$70</span>
+        </a>
+        <a href="https://buy.stripe.com/cNibJ0331btR4oa1K933W02" target="_blank" rel="noopener" class="tier-pill">
+          <span class="tp-name">Trio</span>
+          <span class="tp-price">$100</span>
+        </a>
+        <a href="https://buy.stripe.com/5kQeVcdHFeG33k6ewV33W03" target="_blank" rel="noopener" class="tier-pill">
+          <span class="tp-name">Team</span>
+          <span class="tp-price">$180</span>
+        </a>
+      </div>
+
       <ul class="trust-bullets">
         <li><i class="ti ti-check" aria-hidden="true"></i> Wearable badge reel — always on you</li>
         <li><i class="ti ti-check" aria-hidden="true"></i> One-time payment — no monthly fees</li>
         <li><i class="ti ti-check" aria-hidden="true"></i> Custom to your business, not a template</li>
       </ul>
       <div class="hero-actions">
-        <a href="#pricing" class="btn-primary">Design my badge</a>
+        <a href="#pricing" class="btn-primary">Get my badge — from $40</a>
         <a href="#compare" class="btn-ghost">See how it compares</a>
+      </div>
+
+      <div class="hero-guarantee-row">
+        <div class="hg-item"><i class="ti ti-shield-check" aria-hidden="true"></i> 30-Day Guarantee</div>
+        <div class="hg-item"><i class="ti ti-map-pin" aria-hidden="true"></i> Made in San Jose, CA</div>
+        <div class="hg-item"><i class="ti ti-truck" aria-hidden="true"></i> Free shipping</div>
       </div>
     </div>
     <div class="badge-stage">
