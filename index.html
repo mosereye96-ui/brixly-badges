@@ -1579,6 +1579,99 @@
   }
   .pf-item .ti{color:var(--gold); font-size:17px;}
 
+  /* WHO IT'S FOR */
+  .wif-header{margin-bottom:48px;}
+  .wif-header h2{font-size:34px; margin-top:12px;}
+  .wif-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:16px;
+  }
+  .wif-card{
+    background:#fff;
+    border:1.5px solid var(--border-strong);
+    border-radius:18px;
+    padding:28px 22px;
+    text-align:center;
+    transition:transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .wif-card:hover{transform:translateY(-4px); box-shadow:0 20px 40px -20px rgba(28,24,18,0.22);}
+  .wif-icon{font-size:36px; margin-bottom:14px;}
+  .wif-label{font-family:'Fraunces',serif; font-weight:600; font-size:17px; color:var(--text); margin-bottom:8px;}
+  .wif-tags{font-size:12.5px; color:var(--text-dim); line-height:1.7;}
+  @media(max-width:860px){.wif-grid{grid-template-columns:repeat(2,1fr);}}
+  @media(max-width:480px){.wif-grid{grid-template-columns:1fr;}}
+
+  /* WHY BENTO */
+  .why-header{margin-bottom:48px;}
+  .why-header h2{font-size:34px; margin-top:12px;}
+  .why-bento{
+    display:grid;
+    grid-template-columns:1.5fr 1fr 1fr;
+    grid-template-rows:auto auto;
+    gap:14px;
+  }
+  .wb-card{
+    background:#fff;
+    border:1.5px solid var(--border-strong);
+    border-radius:18px;
+    padding:28px 26px;
+    transition:transform 0.18s ease;
+  }
+  .wb-card:hover{transform:translateY(-3px);}
+  .wb-large{grid-row:1/3; display:flex; flex-direction:column; justify-content:center;}
+  .wb-accent{background:var(--orange); border-color:var(--orange);}
+  .wb-accent h3,.wb-accent p{color:#fff;}
+  .wb-icon-lg{font-size:44px; margin-bottom:18px;}
+  .wb-icon{font-size:28px; margin-bottom:12px;}
+  .wb-card h3{font-family:'Fraunces',serif; font-size:19px; font-weight:600; margin-bottom:8px; color:var(--text);}
+  .wb-card p{font-size:13.5px; color:var(--text-dim); line-height:1.6;}
+  @media(max-width:900px){
+    .why-bento{grid-template-columns:1fr 1fr; grid-template-rows:auto;}
+    .wb-large{grid-row:auto;}
+  }
+  @media(max-width:520px){.why-bento{grid-template-columns:1fr;}}
+
+  /* COMPARE TABLE */
+  .cmp-header{margin-bottom:48px;}
+  .cmp-header h2{font-size:34px; margin-top:12px;}
+  .cmp-grid{
+    border:1.5px solid var(--border-strong);
+    border-radius:18px;
+    overflow:hidden;
+    background:#fff;
+  }
+  .cmp-row{
+    display:grid;
+    grid-template-columns:1.6fr 1fr 1fr;
+    border-bottom:1px solid var(--border);
+  }
+  .cmp-row:last-child{border-bottom:none;}
+  .cmp-head-row{background:var(--surface-2);}
+  .cmp-feat{
+    padding:16px 22px;
+    font-size:14px;
+    font-weight:600;
+    color:var(--text);
+    display:flex;
+    align-items:center;
+  }
+  .cmp-col{
+    padding:16px 22px;
+    font-size:13.5px;
+    display:flex;
+    align-items:center;
+    border-left:1px solid var(--border);
+  }
+  .cmp-generic{font-weight:600; font-size:13px; color:var(--text-dim);}
+  .cmp-brixly{font-weight:600; font-size:13px; color:var(--orange); background:rgba(193,80,46,0.05);}
+  .cmp-no{color:var(--text-dim);}
+  .cmp-yes{color:var(--orange); font-weight:600;}
+  @media(max-width:640px){
+    .cmp-row{grid-template-columns:1fr 1fr; gap:0;}
+    .cmp-feat{grid-column:1/-1; background:var(--surface-2); font-size:12px;}
+  }
+
   /* GUARANTEE */
   .guarantee{
     background:var(--surface);
@@ -2130,81 +2223,6 @@
     </div>
   </div>
 </section>
-
-<section id="showcase">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="eyebrow">Real badges, real clients</div>
-      <h2>Out in the wild already.</h2>
-      <p>These aren't renders. Every badge below is printed, clipped on, and being used right now by local shops across the Bay Area.</p>
-      <div class="proof-bar">
-        <span class="proof-item">King Wheels</span>
-        <span class="proof-dot">·</span>
-        <span class="proof-item">Autosound</span>
-        <span class="proof-dot">·</span>
-        <span class="proof-item">Alter's Auto Works</span>
-        <span class="proof-dot">·</span>
-        <span class="proof-item">Bay Area shops</span>
-      </div>
-    </div>
-
-    <div class="showcase-featured">
-      <div class="showcase-featured-main">
-        <img src="" id="showcase-img-alfredo_shop" alt="Alfredo Lopez showing his Brixly badge while working on a car">
-        <div class="showcase-caption">
-          <div class="name">Alfredo L. — in the shop</div>
-          <div class="tag">Alter's Auto Works · Santa Clara, CA</div>
-        </div>
-      </div>
-      <div class="showcase-featured-strip">
-        <div class="showcase-card">
-          <img src="" id="showcase-img-kingwheels" alt="King Wheels badge reel outside their San Jose storefront">
-          <div class="showcase-caption">
-            <div class="name">King Wheels</div>
-            <div class="tag">San Jose, CA · Tire Shop</div>
-          </div>
-        </div>
-        <div class="showcase-card">
-          <img src="" id="showcase-img-raynod" alt="King Wheels employee Rayno holding his badge reel">
-          <div class="showcase-caption">
-            <div class="name">Rayno D.</div>
-            <div class="tag">King Wheels</div>
-          </div>
-        </div>
-        <div class="showcase-card">
-          <img src="" id="showcase-img-autosound" alt="Autosound Car Stereos badge reel outside their storefront">
-          <div class="showcase-caption">
-            <div class="name">Autosound Car Stereos</div>
-            <div class="tag">San Jose, CA</div>
-          </div>
-        </div>
-        <div class="showcase-card">
-          <img src="" id="showcase-img-kevind" alt="Autosound employee Kevin holding his badge reel">
-          <div class="showcase-caption">
-            <div class="name">Kevin D.</div>
-            <div class="tag">Autosound Car Stereos</div>
-          </div>
-        </div>
-        <div class="showcase-card">
-          <img src="" id="showcase-img-alfredo_store" alt="Alter's Auto Works badge outside storefront">
-          <div class="showcase-caption">
-            <div class="name">Alfredo L.</div>
-            <div class="tag">Alter's Auto Works</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-
-
-
-
-
-
 <section id="templates">
   <div class="wrap">
     <div class="section-head">
@@ -2323,25 +2341,32 @@
 </section>
 
 
-<section id="built-for">
+<section id="who-its-for">
   <div class="wrap">
-    <div class="section-head">
+    <div class="wif-header">
       <div class="eyebrow">Made for the field, not the office</div>
-      <h2>Built for people who show up in person.</h2>
-      <p>If your work happens face-to-face — job sites, chairs, counters, garages — this is built for you.</p>
+      <h2>If you talk to customers face-to-face, this is for you.</h2>
     </div>
-    <div class="category-grid">
-      <div class="category-card">
-        <div class="category-title">Field service</div>
-        <div class="category-tags">Plumbers · HVAC · Electricians · Roofers · Landscapers · Movers · Pest control · Cleaners</div>
+    <div class="wif-grid">
+      <div class="wif-card">
+        <div class="wif-icon">🔧</div>
+        <div class="wif-label">Field service</div>
+        <div class="wif-tags">Plumbers · HVAC · Electricians · Roofers · Landscapers · Movers</div>
       </div>
-      <div class="category-card">
-        <div class="category-title">In-person service</div>
-        <div class="category-tags">Barbers · Stylists · Nail techs · Estheticians · Mobile detailers · Trainers · Pet groomers</div>
+      <div class="wif-card">
+        <div class="wif-icon">✂️</div>
+        <div class="wif-label">In-person service</div>
+        <div class="wif-tags">Barbers · Stylists · Nail techs · Detailers · Trainers · Groomers</div>
       </div>
-      <div class="category-card">
-        <div class="category-title">Healthcare & specialty</div>
-        <div class="category-tags">Med spas · Chiropractors · Dentists · Physical therapists · Home health aides</div>
+      <div class="wif-card">
+        <div class="wif-icon">🏥</div>
+        <div class="wif-label">Healthcare & specialty</div>
+        <div class="wif-tags">Med spas · Chiropractors · Dentists · Physical therapists</div>
+      </div>
+      <div class="wif-card">
+        <div class="wif-icon">🚗</div>
+        <div class="wif-label">Auto & shop</div>
+        <div class="wif-tags">Mechanics · Tire shops · Detailers · Car stereos · Body shops</div>
       </div>
     </div>
   </div>
@@ -2349,160 +2374,85 @@
 
 <section id="why">
   <div class="wrap">
-    <div class="section-head">
-      <div class="eyebrow">Why teams switch</div>
-      <h2>Small habit, real results.</h2>
+    <div class="why-header">
+      <div class="eyebrow">Why it works</div>
+      <h2>Six reasons teams don't go back.</h2>
     </div>
-    <div class="why-grid">
-      <div class="why-card">
-        <i class="ti ti-id-badge-2" aria-hidden="true"></i>
-        <h3>Always on you</h3>
-        <p>Clipped on like ID gear — visible and ready, never left in a pocket or truck.</p>
+    <div class="why-bento">
+      <div class="wb-card wb-large">
+        <div class="wb-icon-lg">👀</div>
+        <h3>Always visible</h3>
+        <p>Clipped on like ID gear. Never left in a truck or forgotten in a pocket. It's on your chest asking for a review all day without you saying a word.</p>
       </div>
-      <div class="why-card">
-        <i class="ti ti-mood-smile" aria-hidden="true"></i>
-        <h3>Feels professional</h3>
-        <p>Worn like real equipment. Asking for a review feels natural, not pushy.</p>
+      <div class="wb-card">
+        <div class="wb-icon">⚡</div>
+        <h3>One tap. Done.</h3>
+        <p>Customer taps badge → review page opens. No app, no typing, no friction.</p>
       </div>
-      <div class="why-card">
-        <i class="ti ti-bolt" aria-hidden="true"></i>
-        <h3>Zero friction</h3>
-        <p>One tap or scan opens the review page instantly. No app for the customer.</p>
-      </div>
-      <div class="why-card">
-        <i class="ti ti-shield" aria-hidden="true"></i>
-        <h3>Built to last</h3>
-        <p>Stainless steel reel and clip, designed for daily wear on the job.</p>
-      </div>
-      <div class="why-card">
-        <i class="ti ti-palette" aria-hidden="true"></i>
+      <div class="wb-card">
+        <div class="wb-icon">🎨</div>
         <h3>Actually yours</h3>
-        <p>Your name, your logo, your colors — not a shared template everyone else has.</p>
+        <p>Your logo, name, colors — not a blank template every competitor also has.</p>
       </div>
-      <div class="why-card">
-        <i class="ti ti-trending-up" aria-hidden="true"></i>
+      <div class="wb-card">
+        <div class="wb-icon">💪</div>
+        <h3>Built to last</h3>
+        <p>Stainless steel reel and clip. Designed for daily job-site wear, not a trade show lanyard.</p>
+      </div>
+      <div class="wb-card wb-accent">
+        <div class="wb-icon">📈</div>
         <h3>Results in week one</h3>
-        <p>Better rankings, more trust, more calls. Most businesses see it fast.</p>
+        <p>Most businesses see new reviews within days of wearing it. Better rankings follow.</p>
       </div>
     </div>
-  </div>
-</section>
-      <div class="eyebrow">How it works</div>
-      <h2>From order to worn badge in under a week.</h2>
-    </div>
-    <div class="steps">
-      <div class="step-card">
-        <div class="step-num">01</div>
-        <h3>Send your details</h3>
-        <p>Business name, logo, and your Google review link — that's all we need to start designing.</p>
-      </div>
-      <div class="step-card">
-        <div class="step-num">02</div>
-        <h3>We design and print</h3>
-        <p>Your badge is individually printed and programmed with your review link, not a shared template.</p>
-      </div>
-      <div class="step-card">
-        <div class="step-num">03</div>
-        <h3>Clip it on, start tapping</h3>
-        <p>Retractable reel clips to any uniform. One tap opens your review page — no app required.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-<section id="offer-stack">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="eyebrow">Everything in the box</div>
-      <h2>One price. The whole stack.</h2>
-      <p>Not a blank tag you have to figure out. A finished badge built for your business — ready to wear the day it arrives.</p>
-    </div>
-    <div class="stack-grid">
-      <div class="stack-item">
-        <div class="stack-num">01</div>
-        <h3>Custom front</h3>
-        <p>Your logo, name, title, and phone — printed so it looks like gear, not a promo flyer.</p>
-      </div>
-      <div class="stack-item">
-        <div class="stack-num">02</div>
-        <h3>Custom back</h3>
-        <p>Google review prompt, stars, QR code, and NFC tap. The side that makes you money.</p>
-      </div>
-      <div class="stack-item">
-        <div class="stack-num">03</div>
-        <h3>Wearable reel</h3>
-        <p>Steel clip + retractable reel. Stays on the shirt or belt all day — always ready.</p>
-      </div>
-      <div class="stack-item">
-        <div class="stack-num">04</div>
-        <h3>We design it</h3>
-        <p>Send logo + review link. We build the badge, send a proof, then print and ship.</p>
-      </div>
-      <div class="stack-item">
-        <div class="stack-num">05</div>
-        <h3>Free shipping</h3>
-        <p>Every order, every tier. No minimums, no fine print.</p>
-      </div>
-      <div class="stack-item">
-        <div class="stack-num">06</div>
-        <h3>Reviews up or money back</h3>
-        <p>Wear it 30 days. If Google reviews don't grow, full refund. We bet on the product.</p>
-      </div>
-    </div>
-    <p class="stack-price-note">Most shops start with <strong>Duo ($70)</strong> or <strong>Trio ($100)</strong> so the whole floor is carrying the ask — not just one person.</p>
   </div>
 </section>
 
 <section id="compare-generic">
   <div class="wrap">
-    <div class="section-head">
+    <div class="cmp-header">
       <div class="eyebrow">Don't buy a gadget. Buy your identity.</div>
-      <h2>Generic NFC card vs. a Brixly badge.</h2>
+      <h2>Brixly vs. generic NFC.</h2>
     </div>
-    <div class="compare-table-wrap">
-      <table class="compare-table">
-        <thead>
-          <tr>
-            <th></th>
-            <th>Generic NFC / Zappy-style</th>
-            <th class="highlight">Brixly Badge</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Your logo & name printed</td>
-            <td class="no">No — blank or generic</td>
-            <td class="yes">Yes — both sides</td>
-          </tr>
-          <tr>
-            <td>Looks like your business</td>
-            <td class="no">Looks like a gadget</td>
-            <td class="yes">Looks like gear</td>
-          </tr>
-          <tr>
-            <td>App required</td>
-            <td class="no">Often yes</td>
-            <td class="yes">No app</td>
-          </tr>
-          <tr>
-            <td>Double-sided custom</td>
-            <td class="no">Rarely</td>
-            <td class="yes">Always included</td>
-          </tr>
-          <tr>
-            <td>Ready to wear on day one</td>
-            <td class="no">You program it</td>
-            <td class="yes">We design & ship it</td>
-          </tr>
-        </tbody>
-      </table>
+    <div class="cmp-grid">
+      <div class="cmp-row cmp-head-row">
+        <div class="cmp-feat"></div>
+        <div class="cmp-col cmp-generic">Generic / Zappy</div>
+        <div class="cmp-col cmp-brixly">Brixly Badge</div>
+      </div>
+      <div class="cmp-row">
+        <div class="cmp-feat">Logo &amp; name printed</div>
+        <div class="cmp-col cmp-no">✗ Blank or generic</div>
+        <div class="cmp-col cmp-yes">✓ Both sides</div>
+      </div>
+      <div class="cmp-row">
+        <div class="cmp-feat">Looks like your business</div>
+        <div class="cmp-col cmp-no">✗ Looks like a gadget</div>
+        <div class="cmp-col cmp-yes">✓ Looks like gear</div>
+      </div>
+      <div class="cmp-row">
+        <div class="cmp-feat">Customer needs an app</div>
+        <div class="cmp-col cmp-no">✗ Often yes</div>
+        <div class="cmp-col cmp-yes">✓ No app ever</div>
+      </div>
+      <div class="cmp-row">
+        <div class="cmp-feat">Double-sided custom</div>
+        <div class="cmp-col cmp-no">✗ Rarely</div>
+        <div class="cmp-col cmp-yes">✓ Always included</div>
+      </div>
+      <div class="cmp-row">
+        <div class="cmp-feat">Ready to wear day one</div>
+        <div class="cmp-col cmp-no">✗ You program it</div>
+        <div class="cmp-col cmp-yes">✓ We design &amp; ship it</div>
+      </div>
     </div>
   </div>
 </section>
 
 <section id="pricing">
+  <div class="wrap">
+    <div class="section-head">
+
   <div class="wrap">
     <div class="section-head">
       <div class="eyebrow">Simple pricing</div>
