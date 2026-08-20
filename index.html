@@ -2334,13 +2334,11 @@
     var title = document.getElementById('bs-title').value.trim()||'Owner';
     var phone = document.getElementById('bs-phone').value.trim()||'(555) 000-0000';
     var initials = mono(biz);
-    document.getElementById('slate-biz-front').textContent = biz;
-    document.getElementById('slate-biz-back').textContent = biz;
-    document.getElementById('slate-person-back').textContent = person;
-    document.getElementById('slate-title-back').textContent = title;
-    document.getElementById('slate-phone-back').textContent = phone;
-    setLogo(document.getElementById('slate-logo-front'), logoSrc, initials);
-    setLogo(document.getElementById('slate-logo-back'), logoSrc, initials);
+    var bizBack = document.getElementById('slate-biz-back'); if(bizBack) bizBack.textContent = biz;
+    var personBack = document.getElementById('slate-person-back'); if(personBack) personBack.textContent = person;
+    var titleBack = document.getElementById('slate-title-back'); if(titleBack) titleBack.textContent = title;
+    var phoneBack = document.getElementById('slate-phone-back'); if(phoneBack) phoneBack.textContent = phone;
+    var logoBack = document.getElementById('slate-logo-back'); if(logoBack) setLogo(logoBack, logoSrc, initials);
   }
   ['bs-biz','bs-person','bs-title','bs-phone'].forEach(function(id){
     var el = document.getElementById(id); if(el) el.addEventListener('input', paint);
